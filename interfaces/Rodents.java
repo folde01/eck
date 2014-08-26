@@ -9,17 +9,14 @@ class Trait {
   }
 }
 
-abstract class Rodent { 
+//abstract class Rodent { 
+interface Rodent { 
 
-  Trait t = new Trait("Rodenty");
+  //Trait t;
 
-  Rodent() { 
-    print("Rodent()");
-  }
-
-  abstract public String toString();
-  abstract void sound();
-  abstract void move();
+  String toString();
+  void sound();
+  void move();
 
   /*
   public String toString() { 
@@ -35,7 +32,7 @@ abstract class Rodent {
 
 }
 
-class Mouse extends Rodent { 
+class Mouse implements Rodent { 
   Trait t = new Trait("Mousey");
   Mouse() { 
     print("Mouse()");
@@ -44,10 +41,10 @@ class Mouse extends Rodent {
   public String toString() { 
     return "I'm a Mouse";
   }
-  void sound() { 
+  public void sound() { 
     squeak();    
   }
-  void move() { 
+  public void move() { 
     run();
   }
   void squeak() { 
@@ -58,7 +55,7 @@ class Mouse extends Rodent {
   }
 }
 
-class Hamster extends Rodent { 
+class Hamster implements Rodent { 
   Trait t = new Trait("Hamstery");
   Hamster() { 
     print("Hamster()");
@@ -66,10 +63,10 @@ class Hamster extends Rodent {
   public String toString() { 
     return "I'm a Hamster";
   }
-  void sound() { 
+  public void sound() { 
     meep();    
   }
-  void move() { 
+  public void move() { 
     squirm();
   }
   void meep() { 
@@ -80,7 +77,7 @@ class Hamster extends Rodent {
   }
 }
 
-class Gerbil extends Rodent { 
+class Gerbil implements Rodent { 
   Trait t = new Trait("Gerbilly");
   Gerbil() { 
     print("Gerbil()");
@@ -88,10 +85,10 @@ class Gerbil extends Rodent {
   public String toString() { 
     return "I'm a Gerbil";
   }
-  void sound() { 
+  public void sound() { 
     peep();    
   }
-  void move() { 
+  public void move() { 
     scurry();
   }
   void peep() { 
