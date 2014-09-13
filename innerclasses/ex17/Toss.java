@@ -1,3 +1,4 @@
+
 interface Tossable { 
   int toss();
 }
