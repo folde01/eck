@@ -15,6 +15,7 @@ public class Splitting {
     split("\\W+"); // Non-word characters
     split("n\\W+"); // 'n' followed by non-word characters
     split("((the)|(you))"); // 'n' followed by non-word characters
+    System.out.println(knights.replaceAll("A|E|I|O|U|a|e|i|o|u", "_"));
   }
 } /* Output:
 [Then,, when, you, have, found, the, shrubbery,, you, must, cut, down, the, mightiest, tree, in, the, forest..., with..., a, herring!]
