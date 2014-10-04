@@ -24,9 +24,11 @@ public class Shapes {
       shp.draw();
       rotate(shp);
       Class cls = shp.getClass();
-      if (cls.getSimpleName() == toHighlight) { 
+      if (cls.getSimpleName().equals(toHighlight)) { 
         shp.toggleHighlight();
       }
+      System.out.println(shp);
+      System.out.println("---------------");
     }
     Shape r = new Rhomboid();
     if (r instanceof Circle) { 
