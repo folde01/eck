@@ -1,3 +1,5 @@
+import java.lang.reflect.*;
+
 class A extends B { 
   static void showClasses(Object o) { 
     Class c = o.getClass();
@@ -7,6 +9,11 @@ class A extends B {
     }
     else { 
       System.out.println(c.getName());
+      for (Field f : c.getDeclaredFields()) { 
+        System.out.println("yoda");
+        System.out.println(f);
+      }
+      System.out.println("-------------");
       try { 
         showClasses(c.getSuperclass().newInstance());
       } catch(Exception e) { 
@@ -21,4 +28,6 @@ class A extends B {
 }
 
 class B extends C {}
-class C {}
+class C {
+  int i = 1;
+}
