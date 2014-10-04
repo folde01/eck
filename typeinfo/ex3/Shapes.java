@@ -8,8 +8,9 @@ public class Shapes {
       Class cls = shp.getClass();
       System.out.println("Rotating " + cls.getSimpleName());
     }
-
   }
+
+
   private static RandomShapeGenerator gen =
     new RandomShapeGenerator();
   public static void main(String[] args) {
@@ -18,9 +19,14 @@ public class Shapes {
     for(int i = 0; i < s.length; i++)
       s[i] = gen.next();
     // Make polymorphic method calls:
+    String toHighlight = "Triangle";
     for(Shape shp : s) { 
       shp.draw();
       rotate(shp);
+      Class cls = shp.getClass();
+      if (cls.getSimpleName() == toHighlight) { 
+        shp.toggleHighlight();
+      }
     }
     Shape r = new Rhomboid();
     if (r instanceof Circle) { 
