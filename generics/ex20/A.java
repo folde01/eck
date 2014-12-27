@@ -9,6 +9,7 @@ class A implements I {
     System.out.println("m3()");
   }
   public static void main(String[] args) { 
+
     A i = new A();
     i.m1();
     i.m2();
